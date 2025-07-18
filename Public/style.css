@@ -1,0 +1,267 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+.content, .content h4 {
+    font-family: "Times New Roman", Times, serif !important;
+}
+
+/* Video Background */
+#bg-video {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    z-index: -1;
+}
+
+/* Overlay */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.4); /* Dark overlay for readability */
+    z-index: -1;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 100px;
+    position: fixed; /* Fixed so it stays visible while scrolling */
+    width: 100%;
+    top: 0;
+    background: rgba(0, 0, 0, 0.6); /* Slightly transparent */
+    z-index: 100;
+    height: 13%;
+}
+
+/* Navbar Links */
+.nav-left, .nav-right {
+    display: flex;
+    list-style: none;
+}
+
+.nav-left li, .nav-right li {
+    margin: 0 30px;
+}
+
+.nav-left a, .nav-right a {
+    text-decoration: none;
+    color: white;
+    font-size: 19px;
+    transition: 0.3s;
+}
+
+.nav-left a:hover, .nav-right a:hover {
+    color: #fbd786;
+}
+
+/* Centered Logo */
+.logo img {
+    height: 165px;
+    margin-left: -120px; 
+}
+
+/* Main Content (Scrollable) */
+.content {
+    position: relative;
+    text-align: center;
+    color: white;
+    padding-top: 369px; /* Push down from navbar */
+    font-family: "Times New Roman", "Georgia", serif;
+
+
+    font-style: italic;
+}
+
+.content h4 {
+    font-size: 32px; /* Adjusted size */
+    font-weight: bold;
+    margin-bottom: 10px;
+    position: relative;
+    display: inline-block;
+    font-style: italic;
+    margin-top: 43px; /* Adjust as needed */
+    margin-right: 35px;
+
+}
+
+.content h4::before,
+.content h4::after {
+    font-size: 48px; /* Bigger quote size */
+    color: #ffffff; /* Accent color */
+    font-weight: bold;
+    font-family: "Times New Roman", "Georgia", serif;
+
+
+}
+
+.content h4::before {
+    content: "“"; /* Opening fancy quote */
+    margin-right: 8px;
+}
+
+.content h4::after {
+    content: "”"; /* Closing fancy quote */
+    margin-left: 8px;
+}
+
+.content p {
+    font-size: 22px;
+    opacity: 0.8;
+}
+
+/* Scrollable Sections */
+.section {
+    height: 100vh; /* Full screen height */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 28px;
+    padding: 50px;
+}
+
+/*.section:nth-child(odd) {
+    background: rgba(0, 0, 0, 0.5); /* Darker background 
+}
+/*
+.section:nth-child(even) {
+    background: rgba(255, 255, 255, 0.2); /* Lighter background 
+}*/
+
+
+.spacer {
+    height: 200px; /* Adjust to push Section 1 down */
+}
+
+
+/* Flexbox Layout for Stress & Anxiety Section */
+
+.stress-anxiety {
+    display: flex;
+    justify-content: space-between; /* Pushes them to edges */
+    align-items: center;
+    gap: 200px; /* Adjust spacing */
+ 
+
+   
+    padding: 50px 200px 50px 150px; /* More left padding reduces center shift */
+}
+
+/* Left & Right Sections */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 50px; /* Space between boxes */
+}
+
+
+/* Icon Styling */
+.icon {
+    width: 100px; /* Adjust as needed */
+    height: auto;
+    margin-bottom: 10px;
+}
+
+
+.box p {
+    max-width: 370px; /* Adjust this value as needed */
+    margin-bottom: 60px; /* Moves boxes farther apart */
+    word-wrap: break-word; /* Ensures long words wrap properly */
+    
+}
+.explore-btn {
+    position: relative;
+    top: -50px;   /* Moves the button up */
+    left: -57px;  /* Moves the button to the left */
+    width: 200px; /* Adjust the width as needed */
+    max-width: 80%; /* Ensures it remains responsive */
+    padding: 12px 20px;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 16px;
+    text-align: center;
+    display: block;
+    margin: 20px auto; /* Centers the button */
+    border-radius: 23px;
+    text-decoration: none; /* Ensures there's no underline on the text */
+}
+
+
+/* Hover Effect */
+.explore-btn:hover {
+    background: white;
+    color: black;
+}
+
+/* Dropdown Menu Style */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #000; /* Black background */
+    color: white; /* White text */
+    min-width: 250px; /* Make the dropdown wider */
+    max-width: 300px; /* Optional: You can limit the max width */
+    max-height: 300px; /* Increase the max height to make it longer */
+    overflow-y: auto; /* Add scrolling if the content exceeds the max height */
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.5);
+    z-index: 1;
+    border-radius: 10px; /* Rounded corners */
+    opacity: 0;
+    transition: opacity 0.3s ease, transform 0.3s ease; /* Smooth fade-in and pop effect */
+    transform: translateY(10px); /* Slight downward offset initially */
+}
+
+.dropdown-content a {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    transition: background-color 0.3s ease, padding-left 0.3s ease;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2); /* Add subtle border between items */
+    border-radius: 10px; /* Rounded corners for each item */
+}
+
+.dropdown-content a:hover {
+    background-color: #444; /* Darker grey background on hover */
+    padding-left: 24px; /* Add left padding on hover for a subtle effect */
+}
+
+/* Show dropdown when hovering */
+.dropdown:hover .dropdown-content {
+    display: block;
+    opacity: 1; /* Fade in when hovering */
+    transform: translateY(0); /* Remove downward offset */
+}
+
+/* Hover effects for the dropdown container */
+.dropdown:hover {
+    background-color: #333; /* Darken the background of the dropdown container */
+    border-radius: 10px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.6); /* Add a soft shadow for extra depth */
+}
+
+/* Prevent last item from having a bottom border */
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+

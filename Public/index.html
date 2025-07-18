@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mindful Relaxation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Video Background -->
+    <video autoplay muted loop id="bg-video">
+        <source src="videos/homepage_vid.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+    </video>
+
+    <!-- Overlay for better text visibility -->
+    <div class="overlay"></div>
+
+    <!-- Navbar -->
+    <nav>
+        <ul class="nav-left">
+            <li><b><a href="http://localhost:8501" target="_blank">Questionnaire</a></b></li>
+
+            <!-- Dropdown for Chatbots -->
+            <li class="dropdown">
+                <b><a href="#">Chatbots</a></b>
+            </li>
+        </ul>
+
+        <div class="logo">
+            <img src="images/logo.png" alt="Logo">
+        </div>
+
+        <ul class="nav-right">
+            <li class="dropdown">
+                <b><a href="#">Exercises</a></b>
+            </li>
+            <li><b><a href="#">About</a></b></li>
+        </ul>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+        <h4>Wellness is not a destination, but a gentle journey back to yourself</h4>
+        <div class="explore-container">
+            <a href="#stress-anxiety-section">
+            <button class="explore-btn">EXPLORE</button>
+        </div>
+    </div>
+    
+
+    <!-- Section 1: Stress & Anxiety -->
+    <div id="stress-anxiety-section" class="section stress-anxiety">
+        <!-- Left Side (Sleep & Stress & Anxiety) -->
+        <div class="content left">
+            <div class="box">
+                <img src="images\sleeping.png" alt="Sleep Icon" class="icon">
+                <h5 class="section-title">Sleep</h5>
+                <p>Discover techniques to improve sleep quality and wake up refreshed.</p>
+            </div>
+            <div class="box">
+                <img src="images/dementia_5705166.png" alt="Stress & Anxiety Icon" class="icon">
+                <h5 class="section-title">Stress & Anxiety</h5>
+                <p>Understand the triggers and learn ways to manage stress for a balanced mind.</p>
+            </div>
+        </div>
+
+        <!-- Right Side (Mindfulness & Meditation) -->
+        <div class="content right">
+            <div class="box">
+                <img src="images/enlightement (1).png" alt="Mindfulness Icon" class="icon">
+                <h5>Mindfulness</h5>
+                <p>Learn how to stay present and fully engage in the moment.</p>
+            </div>
+            <div class="box">
+                <img src="images/lotus.png" alt="Meditation Icon" class="icon">
+                <h5>Meditation</h5>
+                <p>Explore guided meditation techniques to help calm your thoughts and focus.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
